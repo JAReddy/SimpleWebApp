@@ -16,8 +16,13 @@ public class SimpleWebAppApplication {
 	class HelloWorldController {
 
 		@GetMapping("/")
+		public String welcome() {
+			return "Welcome, you are looking at Amarender's test website !";
+		}
+
+		@GetMapping("/api/hello")
 		public String hello() {
-			return "Hello, you are looking at Amarender's test website !";
+			return " {message: \"welcome\", author: \"Amarender Reddy Jakka\"}";
 		}
 	}
 
